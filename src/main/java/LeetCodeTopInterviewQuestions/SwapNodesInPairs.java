@@ -18,7 +18,7 @@ public class SwapNodesInPairs {
 	public static void displayNodes(ListNode node){
 		System.out.println("\n----------------------------\n");
 		while(node!=null){
-			System.out.println(node.val);
+			System.out.print(node.val+"->");
 			node = node.next;
 		}
 	}

@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class IntToRoman {
 	public static Map<Integer,String> CONSTANTS = new LinkedHashMap<Integer,String>();
-	static{
+	static {
 		CONSTANTS.put(1000,"M");
 		CONSTANTS.put(900,"CM");
 		CONSTANTS.put(500,"D");

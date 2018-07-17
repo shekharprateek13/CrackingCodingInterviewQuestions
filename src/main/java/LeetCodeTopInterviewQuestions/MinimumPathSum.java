@@ -22,10 +22,12 @@ public class MinimumPathSum {
 		}else if(j == colEnd){
 			return (M[i][j] + recurse(M,cache,i+1,j,rowEnd,colEnd));
 		}else{
-			if(cache[i][j] == 0){
+			if(cache[i][j] > 0){
+				return cache[i][j];
+			}else{
 				cache[i][j] = Math.min(M[i][j] + recurse(M,cache,i+1,j,rowEnd,colEnd),M[i][j] + recurse(M,cache,i,j+1,rowEnd,colEnd));
+				return cache[i][j];
 			}
-			return cache[i][j];
 		}
 	}
 

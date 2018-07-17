@@ -1,7 +1,5 @@
 package interview.programs;
 
-import java.util.Scanner;
-
 public class ArrayLeftRotation {
 	/*
 	 * With using a temporary array
@@ -36,7 +34,7 @@ public class ArrayLeftRotation {
 	}
 
 	public static void main(String...args){
-		Scanner in = new Scanner(System.in);
+/*		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
 		int k = in.nextInt();
 		int a[] = new int[n];
@@ -47,8 +45,8 @@ public class ArrayLeftRotation {
 		int[] output = new int[n];
 		output = arrayLeftRotation(a, k);
 		for(int i = 0; i < n; i++)
-			System.out.print(output[i] + " ");
+			System.out.print(output[i] + " ");*/
 
-		System.out.println();
+		System.out.println(Character.isWhitespace("adda bcbc".charAt(4)));
 	}
 }
