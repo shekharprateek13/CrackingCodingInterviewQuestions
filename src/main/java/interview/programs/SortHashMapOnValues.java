@@ -28,7 +28,6 @@ public class SortHashMapOnValues {
 		
 		List<Map.Entry<Character,Integer>> list = new LinkedList<Map.Entry<Character,Integer>>(map.entrySet());
 		Collections.sort(list,new Comparator<Map.Entry<Character,Integer>>(){
-			@Override
 			public int compare(Entry<Character, Integer> o1, Entry<Character, Integer> o2) {
 				if(o1.getValue() - o2.getValue() > 1){
 					return -1;

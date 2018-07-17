@@ -15,13 +15,12 @@ public class LargestNumber {
 	
 	public static String getLargestNumber(int[] nums){
 		StringBuilder sbr = new StringBuilder();
-		List<String> list = new ArrayList<String>();
+		final List<String> list = new ArrayList<String>();
 		for(int i:nums){
 			list.add(String.valueOf(i));
 		}
 		
 		Collections.sort(list, new Comparator<String>(){
-			@Override
 			public int compare(String o1, String o2) {
 				System.out.println(list);
 				return (o2+o1).compareTo(o1+o2);

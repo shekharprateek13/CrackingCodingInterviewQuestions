@@ -1,7 +1,5 @@
 package project.programcreek.tree;
 
-import java.util.LinkedList;
-
 /**
  * @author shekh
  */
@@ -20,7 +18,7 @@ public class BinaryTreeRightSideView {
 		printRightSideView(root.leftChild,currLevel + 1);
 	}
 	
-	public static void printRightSideViewIteratively(TreeNode root, int currLevel){
+	/*public static void printRightSideViewIteratively(TreeNode root, int currLevel){
 		LinkedList<TreeNode> list = new LinkedList<TreeNode>();
 		
 		list.add(root);
@@ -31,7 +29,7 @@ public class BinaryTreeRightSideView {
 			}
 		}
 	}
-	
+	*/
 	public static void main(String[] args) {
 		TreeNode root = new TreeNode(10);
 		root.leftChild = new TreeNode(5);

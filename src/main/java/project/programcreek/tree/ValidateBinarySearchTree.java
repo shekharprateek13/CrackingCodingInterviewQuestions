@@ -3,7 +3,7 @@ package project.programcreek.tree;
 /**
  * @author shekh
  */
-public class ValidateBinaryTree {
+public class ValidateBinarySearchTree {
 	
 	public static boolean validateBinaryTree(TreeNode root, int min, int max){
 		if(root == null)
@@ -29,7 +29,6 @@ public class ValidateBinaryTree {
 		root.rightChild.leftChild = new TreeNode(25);
 		root.rightChild.rightChild = new TreeNode(360);
 		System.out.println(validateBinaryTree(root,Integer.MIN_VALUE,Integer.MAX_VALUE));
-//		System.out.println(getLongestConsecutiveSequence(root));
 		/*
 		 *            20
 		 *	        /    \

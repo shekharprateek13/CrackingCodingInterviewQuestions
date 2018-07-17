@@ -1,8 +1,6 @@
 package project.programcreek.tree;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * @author shekh
@@ -35,13 +33,13 @@ public class SerializeAndDeserializeBTree {
 		return node;
 	}
 	
-	public static boolean validatePreOrderDeserializedTree(List<String> deserializedList){
+/*	public static boolean validatePreOrderDeserializedTree(List<String> deserializedList){
 		LinkedList<String> stack = new LinkedList<String>();
 		
 //		for(int i = 0; i < )
 		
 		return false;
-	}
+	}*/
 
 	public static void main(String[] args) {
 		TreeNode root = new TreeNode(1);

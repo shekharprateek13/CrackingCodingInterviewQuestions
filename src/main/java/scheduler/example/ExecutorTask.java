@@ -8,7 +8,6 @@ public class ExecutorTask implements Runnable {
 		this.threadName = s;
 	}
 
-	@Override
 	public void run(){
 		for(int i = 0; i < 10; i++){
 			try {
