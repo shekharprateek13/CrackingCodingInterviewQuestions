@@ -12,7 +12,7 @@ package LeetCodeTopInterviewQuestions;
  * A = [2,3,1,1,4], return true.
  * A = [3,2,1,0,4], return false. 
  */
-public class JumpGame {
+public class JumpGame{
 
 	public static boolean canJump(int[] nums){
 		int max = 0;
@@ -24,9 +24,25 @@ public class JumpGame {
 		}
 		return true;
 	}
+	
+	public static int minJumpCount(int[] nums){
+		int max = 0;
+		int minJumpCount = 0;
+		int minSteps = 0;
+		for(int i = 0; i < nums.length; i++){
+			if(i > minJumpCount){
+				minSteps++;
+				minJumpCount = max;
+			}
+			
+			max = Math.max(nums[i]+i,max);
+		}
+		return minSteps;
+	}
 
-	public static void main(String[] args) {
-		int[] nums = new int[]{3,2,1,0,4};
+	public static void main(String[] args){
+		int[] nums = new int[]{2,3,1,1,4};
 		System.out.println(JumpGame.canJump(nums));
+		System.out.println(JumpGame.minJumpCount(nums));
 	}
 }
