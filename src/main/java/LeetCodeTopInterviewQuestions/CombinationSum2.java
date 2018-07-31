@@ -25,16 +25,17 @@ public class CombinationSum2 {
 	public static List<List<Integer>> findCombinations(int[] nums,int target){
 		List<List<Integer>> list = new ArrayList<List<Integer>>();
 		Arrays.sort(nums);
-		backtracking(list,new ArrayList<Integer>(),nums,target,0);
+		backtracking_KSubsetSize(list,new ArrayList<Integer>(),nums,target,0,2);
 		return list;
 	}
 
 	public static void backtracking(List<List<Integer>> list, List<Integer> tempList, int[] nums,int target, int start){
 		if(target < 0)return;
-		else if(target == 0){ list.add(new ArrayList<Integer>(tempList));}
-		else{
+		else if(target == 0) { 
+			list.add(new ArrayList<Integer>(tempList));
+		}else {
 			for(int i = start; i < nums.length; i++){
-				if(i > start && nums[i] == nums[i-1]){
+				if(i > start && nums[i] == nums[i-1]) {
 					continue;
 				}
 				tempList.add(nums[i]);
@@ -44,8 +45,22 @@ public class CombinationSum2 {
 		}
 	}
 
+	public static void backtracking_KSubsetSize(List<List<Integer>> list, List<Integer> tempList, int[] nums,int target, int start, int k) {
+		if(target < 0 || tempList.size() > k)return;
+		else if(target == 0 && tempList.size() == k) { 
+			list.add(new ArrayList<Integer>(tempList)); 
+		}else {
+			for(int i = start; i < nums.length; i++) {
+				if(i > start && nums[i] == nums[i-1]){ continue; }
+				tempList.add(nums[i]);
+				backtracking_KSubsetSize(list, tempList, nums, target - nums[i],i+1,k);
+				tempList.remove(tempList.size() - 1);
+			}
+		}
+	}
+
 	public static void main(String[] args){
-		List<List<Integer>> list = findCombinations(new int[]{2,3,2,6,7,9},9);
+		List<List<Integer>> list = findCombinations(new int[]{1,2,3,5,6,7,9},9);
 		for(List<Integer> tempList: list){
 			System.out.println(tempList);
 		}

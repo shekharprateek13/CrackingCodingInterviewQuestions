@@ -17,7 +17,6 @@ import java.util.List;
  *   [3,1,2],
  *   [3,2,1]
  *  ]
- *
  */
 public class Permutations {
 
@@ -53,25 +52,5 @@ public class Permutations {
 		for(List<Integer> temp: result){
 			System.out.println(temp);
 		}
-
-		/*	String time = "19:23";
-		String minutes = time.substring(3);
-		String hour = time.substring(0, 2);
-		System.out.println(minutes);
-		System.out.println(hour);
-		int maxHour = 23;
-		int maxMinute = 59;
-
-		if(time.charAt(4) > time.charAt(3)){
-			String newMinute = String.valueOf(time.charAt(4)) + String.valueOf(time.charAt(3));
-			if(Integer.parseInt(newMinute) <= maxMinute){
-				System.out.println(time.substring(0,2)+":"+newMinute);
-			}
-		}
-
-		if(time.charAt(0) == '1'){
-			//Find the biggest number from H:MM
-
-		}*/
 	}
 }

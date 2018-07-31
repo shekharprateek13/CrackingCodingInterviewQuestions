@@ -2,7 +2,6 @@ package LeetCodeTopInterviewQuestions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -62,6 +61,13 @@ public class Permutations2{
 	}
 
 	public static void main(String[] args) {
+		int[] nums = new int[]{1,2,3};
+		List<List<Integer>> completeList = new ArrayList<List<Integer>>();
+		backtracking(completeList, new ArrayList<Integer>(),nums);
+		for(List<Integer> temp: completeList){
+			System.out.println(temp);
+		}
+		/*
 		String s = "00:00";
 		String temp = s.replace(":","");
 		int[] tempInt = new int[4];
@@ -86,5 +92,5 @@ public class Permutations2{
 		}else{
 			System.out.println(validTimes.get(position));
 		}
-	}
+	*/}
 }

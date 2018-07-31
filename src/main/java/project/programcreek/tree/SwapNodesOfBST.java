@@ -10,7 +10,7 @@ public class SwapNodesOfBST {
 	static TreeNode middle = null;
 	static TreeNode last = null;
 
-	public static void swapNodes(TreeNode node){
+	public static void swapNodes(TreeNode node) {
 		if(node == null)
 			return;
 		
@@ -28,13 +28,11 @@ public class SwapNodesOfBST {
 		swapNodes(node.rightChild);
 	}
 	
-	
-	
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		TreeNode root = new TreeNode(10);
 		root.leftChild = new TreeNode(5);
 		root.leftChild.leftChild = new TreeNode(4);
-		root.leftChild.rightChild = new TreeNode(35);
+		root.leftChild.rightChild = new TreeNode(35); 
 		root.rightChild = new TreeNode(30);
 		root.rightChild.leftChild = new TreeNode(15);
 		root.rightChild.rightChild = new TreeNode(7);

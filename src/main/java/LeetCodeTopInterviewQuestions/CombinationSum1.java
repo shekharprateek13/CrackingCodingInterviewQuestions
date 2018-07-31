@@ -29,19 +29,17 @@ public class CombinationSum1 {
 	}
 
 	public static void backtracking(List<List<Integer>> list, List<Integer> tempList, int[] nums,int target, int start){
-		System.out.println(tempList);
 		if(target < 0)return;
-		else if(target == 0){ list.add(new ArrayList<Integer>(tempList));}
+		else if(target == 0){ list.add(new ArrayList<Integer>(tempList)); }
 		else{
 			for(int i = start; i < nums.length; i++){
-				
 				tempList.add(nums[i]);
 				backtracking(list, tempList, nums, target - nums[i],i);
 				tempList.remove(tempList.size() - 1);
 			}
 		}
 	}
-
+	
 	public static void main(String[] args) {
 		List<List<Integer>> list = findCombinations(new int[]{2, 3, 6, 7},7);
 		for(List<Integer> tempList: list){
