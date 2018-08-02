@@ -33,14 +33,6 @@ public class SerializeAndDeserializeBTree {
 		return node;
 	}
 	
-/*	public static boolean validatePreOrderDeserializedTree(List<String> deserializedList){
-		LinkedList<String> stack = new LinkedList<String>();
-		
-//		for(int i = 0; i < )
-		
-		return false;
-	}*/
-
 	public static void main(String[] args) {
 		TreeNode root = new TreeNode(1);
 		root.leftChild = new TreeNode(2);

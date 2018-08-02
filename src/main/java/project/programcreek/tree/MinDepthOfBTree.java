@@ -7,7 +7,7 @@ import java.util.LinkedList;
  */
 public class MinDepthOfBTree {
 
-	public static int getMinDepth(TreeNode root){
+	public static int getMinDepth(TreeNode root) {
 		if(root == null){
 			return 0;
 		}
@@ -24,7 +24,7 @@ public class MinDepthOfBTree {
 		return Math.min(getMinDepth(root.leftChild),getMinDepth(root.rightChild));
 	}
 	
-	public static int getMinDepthUsingLevelOrderTraversal(TreeNode root){
+	public static int getMinDepthUsingLevelOrderTraversal(TreeNode root) {
 		if(root == null)
 			return 0;
 		
@@ -61,7 +61,5 @@ public class MinDepthOfBTree {
 		root.rightChild = new TreeNode(3);
 		root.rightChild.leftChild = new TreeNode(6);
 		System.out.println(getMinDepthUsingLevelOrderTraversal(root));
-
 	}
-
 }

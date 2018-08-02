@@ -10,7 +10,7 @@ public class PathSum {
 	/*
 	 * Using Queue
 	 */
-	public static boolean pathSum(TreeNode root, int target){
+	public static boolean pathSum(TreeNode root, int target) {
 		LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
 		LinkedList<Integer> size = new LinkedList<Integer>();
 

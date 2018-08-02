@@ -10,13 +10,14 @@ public class LongestConsecutiveSequence {
 	static LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
 	static LinkedList<Integer> sizeQueue = new LinkedList<Integer>();
 
-	public static int getLongestConsecutiveSequence(TreeNode root){
+	public static int getLongestConsecutiveSequence(TreeNode root) {
 		if(root == null)
 			return 0;
 
 		queue.offer(root);
 		sizeQueue.add(1);
 		int max = 1;
+		
 		while(!queue.isEmpty()){
 			TreeNode node = queue.poll();
 			int size = sizeQueue.poll();
