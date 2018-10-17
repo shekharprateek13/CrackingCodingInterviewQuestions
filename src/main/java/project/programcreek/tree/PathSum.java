@@ -3,13 +3,10 @@ package project.programcreek.tree;
 import java.util.LinkedList;
 
 /**
- * @author shekh
+ * @author shekh................................................
  */
 public class PathSum {
 
-	/*
-	 * Using Queue
-	 */
 	public static boolean pathSum(TreeNode root, int target) {
 		LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
 		LinkedList<Integer> size = new LinkedList<Integer>();
@@ -17,7 +14,7 @@ public class PathSum {
 		queue.add(root);
 		size.add(root.data);
 
-		while(!queue.isEmpty()){
+		while(!queue.isEmpty()) {
 			TreeNode node = queue.poll();
 			int currentSum = size.poll();
 
@@ -63,7 +60,7 @@ public class PathSum {
 		root.rightChild.leftChild = new TreeNode(25);
 		root.rightChild.rightChild = new TreeNode(36);
 		System.out.println(pathSum(root,45));
-		//		System.out.println(getLongestConsecutiveSequence(root));
+		//System.out.println(getLongestConsecutiveSequence(root));
 		/*
 		 *            20
 		 *	        /    \

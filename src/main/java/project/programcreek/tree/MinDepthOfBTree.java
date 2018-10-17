@@ -3,7 +3,7 @@ package project.programcreek.tree;
 import java.util.LinkedList;
 
 /**
- * @author shekh
+ * @author shekh....
  */
 public class MinDepthOfBTree {
 

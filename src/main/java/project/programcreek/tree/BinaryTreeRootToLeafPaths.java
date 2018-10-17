@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class BinaryTreeRootToLeafPaths {
 
-	public static void getAllRootToLeafPaths(TreeNode node, List<TreeNode> l, List<List<TreeNode>> completeBinaryTree){
+	public static void getAllRootToLeafPaths(TreeNode node, List<TreeNode> l, List<List<TreeNode>> completeBinaryTree) {
 		if(node == null)
 			return;
 
@@ -31,7 +31,7 @@ public class BinaryTreeRootToLeafPaths {
 		}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		TreeNode root = new TreeNode(1);
 		root.leftChild = new TreeNode(2);
 		root.leftChild.leftChild = new TreeNode(4);
@@ -44,6 +44,5 @@ public class BinaryTreeRootToLeafPaths {
 		List<List<TreeNode>> completeList = new LinkedList<List<TreeNode>>();
 		getAllRootToLeafPaths(root, list, completeList);
 		System.out.println(completeList);
-
 	}
 }

@@ -7,10 +7,10 @@ public class ClosestBinaryTreeSearchValue {
 
 	static int min_value = Integer.MAX_VALUE;
 	static TreeNode minNode = null;
+	
 	public static void closestBinaryTreeSearchValue(TreeNode root,int target){
 		if(root == null)
 			return;
-		
 		
 		if(min_value > Math.abs(root.data - target)){
 			min_value = Math.abs(root.data - target);
@@ -35,5 +35,4 @@ public class ClosestBinaryTreeSearchValue {
 		System.out.println("Min Node: "+minNode);
 
 	}
-
 }

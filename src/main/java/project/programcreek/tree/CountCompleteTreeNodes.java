@@ -5,7 +5,7 @@ package project.programcreek.tree;
  */
 public class CountCompleteTreeNodes {
 
-	public static int countNodes(TreeNode root){
+	public static int countNodes(TreeNode root) {
 		if(root == null)
 			return 0;
 
@@ -19,15 +19,17 @@ public class CountCompleteTreeNodes {
 		}
 	}
 
-	public static int getLeftHeight(TreeNode node){
+	public static int getLeftHeight(TreeNode node) {
 		if(node == null)
 			return 0;
 
 		int height = 0;
-		while(node.leftChild!=null){
+		
+		while(node.leftChild!=null) {
 			height++;
 			node = node.leftChild;
 		}
+		
 		return height;
 	}
 

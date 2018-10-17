@@ -2,7 +2,7 @@ package LeetCodeTopInterviewQuestions;
 
 public class TinyURLShortener {
 
-	String idToShortURL(long n){
+	static String idToShortURL(long n){
 		// Map to store 62 possible characters
 		char map[] = new char[]{'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w',
 				'x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T',
@@ -29,21 +29,19 @@ public class TinyURLShortener {
 		for (int i=0; i < shortURL.length(); i++){
 			if ('a' <= shortURL.charAt(i) && shortURL.charAt(i) <= 'z'){
 				id = id*62 + shortURL.charAt(i) - 'a';
-				System.out.println(shortURL.charAt(i) - 'a');
 			} 
 			if ('A' <= shortURL.charAt(i) && shortURL.charAt(i) <= 'Z'){
 				id = id*62 + shortURL.charAt(i) - 'A' + 26;
-				System.out.println(shortURL.charAt(i) - 'A' + 26);
 			}	          
 			if ('0' <= shortURL.charAt(i) && shortURL.charAt(i) <= '9'){
 				id = id*62 + shortURL.charAt(i) - '0' + 52;
-				System.out.println(shortURL.charAt(i) - '0' + 52);
 			}
 		}
 		return id;
 	}
 
 	public static void main(String[] args) {
+		System.out.println(idToShortURL(100001));
 		System.out.println(shortURLtoID("dH0"));
 	}
 }

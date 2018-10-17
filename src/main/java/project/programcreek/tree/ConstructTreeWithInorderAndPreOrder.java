@@ -17,7 +17,7 @@ public class ConstructTreeWithInorderAndPreOrder {
 		int val = preorder[preStart];
 		TreeNode node = new TreeNode(val);
 		int breakPoint = 0;
-		for(int i = inStart; i < inorder.length; i++ ){
+		for(int i = inStart; i < inorder.length; i++){
 			if(val == inorder[i]){
 				breakPoint = i;
 				break;

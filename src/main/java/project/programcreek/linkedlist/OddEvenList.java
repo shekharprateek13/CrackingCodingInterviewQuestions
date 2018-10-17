@@ -20,11 +20,11 @@ public class OddEvenList {
 		ListNode evenHead = head.next;
 		ListNode evenNode = evenHead;
 
-		while(oddNode != null && evenNode != null){
+		while(oddNode != null && evenNode != null) {
 			oddNode.next = evenNode.next;
 			oddNode = oddNode.next;
 
-			if(oddNode != null){
+			if(oddNode != null) {
 				evenNode.next = oddNode.next;
 				evenNode = evenNode.next;
 			}

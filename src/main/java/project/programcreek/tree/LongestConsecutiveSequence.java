@@ -35,7 +35,7 @@ public class LongestConsecutiveSequence {
 
 			if(node.rightChild!= null){
 				int rightSize = size;
-				if(node.leftChild.data - node.data == 1){
+				if(node.rightChild.data - node.data == 1){
 					rightSize++;
 					max = Math.max(max,rightSize);
 				}else{

@@ -12,7 +12,6 @@ import java.util.Map;
 public class VerticalOrderTraversal {
 
 	public static void verticalOrderTraversal(TreeNode root, Map<Integer,List<TreeNode>> map, int slope){
-		
 		if(root == null)
 			return;
 		
@@ -29,7 +28,7 @@ public class VerticalOrderTraversal {
 		verticalOrderTraversal(root.rightChild, map, slope + 1);
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		TreeNode root = new TreeNode(1);
 		root.leftChild = new TreeNode(2);
 		root.leftChild.leftChild = new TreeNode(4);

@@ -22,7 +22,7 @@ public class HouseRobber2 {
 		return Math.max(max1, max2);
 	}
 	
-	public static int robMaximumMoney(int[] nums, int start,int end){
+	public static int robMaximumMoney(int[] nums, int start, int end) {
 		int[] cache = new int[nums.length+1];
 		
 		cache[0] = nums[start];
@@ -38,7 +38,5 @@ public class HouseRobber2 {
 	public static void main(String[] args) {
 		int[] temp = new int[]{1,2,3,4,5,6};
 		System.out.println(robHousesInCircle(temp));
-
 	}
-
 }

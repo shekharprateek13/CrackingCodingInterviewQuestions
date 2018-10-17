@@ -30,9 +30,6 @@ public class CheckBalancedTree {
 		root.leftChild.rightChild.rightChild = new TreeNode(100);
 		root.rightChild = new TreeNode(3);
 		root.rightChild.leftChild = new TreeNode(6);
-		
 		System.out.println(checkBalancedTree(root)!=Integer.MIN_VALUE);
-
 	}
-
 }

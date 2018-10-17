@@ -11,6 +11,7 @@ public class InorderSuccessorBST {
 		
 		TreeNode next = null;
 		TreeNode temp = root;
+		
 		while(temp!=null && temp.data != target.data){
 			if(temp.data > target.data){
 				next = temp;

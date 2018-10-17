@@ -33,7 +33,7 @@ public class LongestConsecutiveSequence {
 			while(hashSet.contains(right)){
 				count++;
 				hashSet.remove(right);
-				right--;
+				right++;
 			}
 			maxLength = Math.max(maxLength, count);
 		}

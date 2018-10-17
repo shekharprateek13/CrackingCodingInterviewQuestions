@@ -4,17 +4,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class DecodeWays {
+public class DecodeWays{
 
 	/*
-	 * Trailing 0s in n! = Count of 5s in prime factors of n!
-     * = floor(n/5) + floor(n/25) + floor(n/125) + ....
+	 * Trailing 0s in n! = Count of 5s in prime factors of n! = floor(n/5) + floor(n/25) + floor(n/125) + ....
 	 */
 	public static int findTrailingZeros(int n) {
-		// Initialize result
+		//Initialize result...................................
 		int count = 0;
 
-		// Keep dividing n by powers of 5 and update count
+		// Keep dividing n by powers of 5 and update count....
 		for (int i = 5; n / i >= 1; i *= 5)
 			count += n / i;
 
@@ -90,7 +89,7 @@ public class DecodeWays {
 	}
 	
 	public static int nthUglyNumber(int n) {
-	    if(n<=0)
+	    if(n <= 0)
 	        return 0;
 	 
 	    ArrayList<Integer> list = new ArrayList<Integer>();
@@ -134,7 +133,7 @@ public class DecodeWays {
 	        result[i] = min;
 	 
 	        for (int j = 0; j < times.length; j++) {
-	            if (result[times[j]] * primes[j] == min) {
+	            if (result[times[j]] * primes[j] == min){
 	                times[j]++;
 	            }
 	        }

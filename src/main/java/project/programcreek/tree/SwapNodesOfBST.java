@@ -16,7 +16,7 @@ public class SwapNodesOfBST {
 		
 		swapNodes(node.leftChild);
 		
-		if(pre != null && pre.data > node.data){
+		if(pre != null && pre.data > node.data) {
 			if(first == null){
 				first = pre;
 				middle = node;

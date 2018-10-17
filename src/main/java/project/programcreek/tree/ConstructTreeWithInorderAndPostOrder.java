@@ -27,11 +27,10 @@ public class ConstructTreeWithInorderAndPostOrder {
 		
 		node.leftChild = constructTree(inorder,postorder,postStart,postStart + length - 1,inStart,breakPoint - 1);
 		node.rightChild = constructTree(inorder,postorder,postStart + length,postEnd - 1,breakPoint + 1,inEnd);
-		
 		return node;
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		int[] inorder = new int[]{4,2,5,1,6,7,3,8};
 		int[] postorder = new int[]{4,5,2,6,7,8,3,1};
 		

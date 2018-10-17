@@ -23,7 +23,7 @@ public class MinimumSizeSubArraySum {
 				if(i==j-1)
 					return 1;
 
-				sum -=nums[i];
+				sum -= nums[i];
 				i++;
 			}
 		}
@@ -32,6 +32,7 @@ public class MinimumSizeSubArraySum {
 			minLen = Math.min(minLen, j-i);
 			sum -=nums[i++];
 		}
+		
 		return minLen==Integer.MAX_VALUE? 0: minLen;
 	}
 

@@ -20,16 +20,16 @@ public class LongestSubstringKUniqueChars {
 				map.put(c, 1);
 			}
 			
-			while(map.size() > k){
-				if(maxLength < (i - left)){
+			while(map.size() > k) {
+				if(maxLength < (i - left)) {
 					maxLength = i-left;
 					System.out.println(s.substring(left,i));
 				}
 				
 				int count = map.get(s.charAt(left));
-				if(count == 1){
+				if(count == 1) {
 					map.remove(s.charAt(left));
-				}else{
+				}else {
 					count--;
 					map.put(s.charAt(left),count);
 				}
@@ -45,6 +45,5 @@ public class LongestSubstringKUniqueChars {
 	public static void main(String[] args) {
 		String s = "abcbbbbcccbdddadacb";
 		System.out.println(LongestSubstringKUniqueChars.getLengthOfLongestKUniqueChars(s,3));
-		
 	}
 }

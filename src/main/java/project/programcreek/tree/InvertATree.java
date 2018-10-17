@@ -1,7 +1,9 @@
 package project.programcreek.tree;
 
+import java.util.LinkedList;
+
 /**
- * @author shekh
+ * @author shekh.......................................
  */
 public class InvertATree {
 	
@@ -12,11 +14,33 @@ public class InvertATree {
 		invertBinaryTree(root.leftChild);
 		invertBinaryTree(root.rightChild);
 		
-		if(root.leftChild!=null && root.rightChild!=null){
+		if(root.leftChild!=null && root.rightChild != null){
 			TreeNode temp = root.leftChild;
 			root.leftChild = root.rightChild;
 			root.rightChild = temp;
 		}
+	}
+	
+	public static TreeNode invertTree(TreeNode root) {
+	    LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
+	 
+	    if(root!=null){
+	        queue.add(root);
+	    }
+	 
+	    while(!queue.isEmpty()){
+	        TreeNode p = queue.poll();
+	        if(p.leftChild!=null)
+	            queue.add(p.leftChild);
+	        if(p.rightChild!=null)
+	            queue.add(p.rightChild);
+	 
+	        TreeNode temp = p.leftChild;
+	        p.leftChild = p.rightChild;
+	        p.rightChild = temp;
+	    }
+	 
+	    return root;    
 	}
 
 	public static void main(String[] args){
@@ -33,7 +57,7 @@ public class InvertATree {
 		root.rightChild.rightChild.rightChild = new TreeNode(9);
 		System.out.println("\nOld Tree:");
 		LevelOrderTraversal.levelOrderTraversal(root);
-		invertBinaryTree(root);
+		invertTree(root);
 		System.out.println("\nNew Tree:");
 		LevelOrderTraversal.levelOrderTraversal(root);
 		/*
@@ -57,6 +81,5 @@ public class InvertATree {
 		 *	 / \	   / \
 		 *	9   8	  11 10
 		 */
-		
 	}
 }
