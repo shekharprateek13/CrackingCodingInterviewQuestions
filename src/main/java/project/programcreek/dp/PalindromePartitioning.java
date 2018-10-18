@@ -7,7 +7,6 @@ import java.util.List;
  * @author shekh
  */
 public class PalindromePartitioning {
-
 	public static List<List<String>> palindromePartitioning(String s){
 		List<List<String>> result = new ArrayList<List<String>>();
 		

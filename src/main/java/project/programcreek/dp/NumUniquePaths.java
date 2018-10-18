@@ -5,18 +5,17 @@ package project.programcreek.dp;
  */
 public class NumUniquePaths {
 
-	public static int getTotalUniquePathsDP(int[][] mat, int m, int n){
-		if(m == 0|| n == 0){
+	public static int getTotalUniquePathsDP(int[][] mat, int m, int n) {
+		if(m == 0 || n == 0) {
 			mat[m][n] = 1;
 			return 1;
 		}
 		
-		if(mat[m][n] != 1){
+		if(mat[m][n] != 1) {
 			return mat[m][n];
 		}
 		
 		mat[m][n] = getTotalUniquePathsDP(mat, m - 1, n) +  getTotalUniquePathsDP(mat, m, n - 1);
-		
 		return mat[m][n];
 	}
 	

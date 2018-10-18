@@ -19,8 +19,8 @@ public class PathSum2 {
 			System.out.print(root + "->");
 			return true;
 		}
+		
 		System.out.println();
-
 		return false;
 	}
 

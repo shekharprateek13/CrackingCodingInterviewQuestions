@@ -19,13 +19,12 @@ import java.util.List;
 
 /**
  * @author akhaurishekhar
- *
  */
 public class FindLeavesOfABTree {
 	
 	static List<TreeNode> leafNodes = new ArrayList<TreeNode>();
 	
-	public static void collectLeafNodes(TreeNode node,List<TreeNode> l, List<List<TreeNode>> completeList) {
+	public static void collectLeafNodes(TreeNode node, List<TreeNode> l, List<List<TreeNode>> completeList) {
 		if(node == null)
 			return;
 		

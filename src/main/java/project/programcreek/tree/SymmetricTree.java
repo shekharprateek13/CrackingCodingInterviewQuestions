@@ -9,7 +9,6 @@ public class SymmetricTree {
 		if(node1 == null && node2 == null)
 			return true;
 		
-		
 		if(node1 != null && node2 != null && node1.data == node2.data)
 			return isSymmetricTree(node1.leftChild, node2.rightChild) && 
 						isSymmetricTree(node1.rightChild, node2.leftChild);

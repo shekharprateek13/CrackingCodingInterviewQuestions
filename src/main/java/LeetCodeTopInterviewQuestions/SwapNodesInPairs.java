@@ -23,7 +23,7 @@ public class SwapNodesInPairs {
 		}
 	}
 
-	public static ListNode swapPairs(ListNode head) {
+	public static ListNode swapPairs(ListNode head){
 		if(head.next == null)return head;
 		
 		ListNode first = head;

@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author shekh
@@ -60,6 +62,12 @@ public class GroupAnagrams {
 		for(List<String> l:tempList){
 			System.out.println(l);
 		}
+		String patternString = ".*http://.*";
+
+		Pattern pattern = Pattern.compile(patternString);
+
+		Matcher matcher = pattern.matcher("");
+//		boolean matches = matcher.resematches();
 
 	}
 }

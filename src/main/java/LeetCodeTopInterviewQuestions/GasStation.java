@@ -29,6 +29,6 @@ public class GasStation {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(canCompleteCircuit(new int[]{5,4},new int[]{5,6}));
+		System.out.println(canCompleteCircuit(new int[]{5,6},new int[]{6,5}));
 	}
 }

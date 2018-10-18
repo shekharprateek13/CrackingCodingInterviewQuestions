@@ -2,6 +2,7 @@ package project.programcreek.tree;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author shekh
@@ -54,12 +55,11 @@ public class SumRootToLeaf {
 		list.add(root);
 		List<List<TreeNode>> completeList = new LinkedList<List<TreeNode>>();
 		sumRootToLeaf(root, list, completeList);
-		for(List<TreeNode> l:completeList){
+		completeList.stream().forEach(System.out::println);
+		/*for(List<TreeNode> l:completeList){
 			System.out.println(l);
 		}
-		
 		System.out.println(sumRootToLeaf(root,0,0));
-
+		*/
 	}
-
 }

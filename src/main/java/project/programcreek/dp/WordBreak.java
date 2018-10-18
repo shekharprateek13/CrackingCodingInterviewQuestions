@@ -10,10 +10,13 @@ public class WordBreak {
 	
 	public static boolean wordBreak(String s, List<String> dictionary){
 		int[] position = new int[s.length()+1];
+		
 		for(int i = 0; i < position.length;i++){
 			position[i] = -1;
 		}
+		
 		position[0] = 0;
+		
 		for(int i = 0; i < s.length(); i++){
 			if(position[i] == -1)continue;
 			for(int j = i+1; j <= s.length();j++){

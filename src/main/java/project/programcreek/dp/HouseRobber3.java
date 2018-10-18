@@ -31,7 +31,7 @@ public class HouseRobber3 {
 	 
 	    int[] result = new int[2];
 	    int[] left = helper(root.left);
-	    int[] right = helper (root.right);
+	    int[] right = helper(root.right);
 	 
 	    // result[0] is when root is selected, result[1] is when not. 
 	    result[0] = root.val + left[1] + right[1];

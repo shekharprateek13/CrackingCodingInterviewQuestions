@@ -17,6 +17,7 @@ public class CopyListWithArbitraryPointers {
 	public static void copyList(ListNode head){
 		ListNode temp = head;
 		ListNode newHead = null;
+		
 		while(temp != null){
 			ListNode newNode = new ListNode(temp.data);
 			newNode.next = temp.next;
@@ -40,7 +41,6 @@ public class CopyListWithArbitraryPointers {
 			if(temp2.next != null){
 				temp2 = temp2.next.next;
 			}
-			
 		}
 
 		temp1 = head;

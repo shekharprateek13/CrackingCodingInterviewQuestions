@@ -3,6 +3,8 @@
  */
 package LeetCodeTopInterviewQuestions;
 
+import java.util.concurrent.Future;
+
 /**
  * @author shekh
  * Given an array of non-negative integers, you are initially positioned at the first index of the array.
@@ -25,11 +27,11 @@ public class JumpGame{
 		return true;
 	}
 	
-	public static int minJumpCount(int[] nums){
+	public static int minJumpCount(int[] nums) {
 		int max = 0;
 		int minJumpCount = 0;
 		int minSteps = 0;
-		for(int i = 0; i < nums.length; i++){
+		for(int i = 0; i < nums.length; i++) {
 			if(i > minJumpCount){
 				minSteps++;
 				minJumpCount = max;
@@ -44,5 +46,7 @@ public class JumpGame{
 		int[] nums = new int[]{2,3,1,1,4};
 		System.out.println(JumpGame.canJump(nums));
 		System.out.println(JumpGame.minJumpCount(nums));
+		Future f = null;
+//		f.
 	}
 }

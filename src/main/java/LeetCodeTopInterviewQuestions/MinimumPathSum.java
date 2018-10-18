@@ -32,8 +32,27 @@ public class MinimumPathSum {
 	}
 
 	public static void main(String[] args){
-		int[][] M = new int[][]{{1,3,1},{1,5,1},{4,2,1}};
-		System.out.println(recurse(M,new int[M.length][M[0].length],0,0,M.length-1,M[0].length-1));
+//		int[][] M = new int[][]{{1,3,1},{1,5,1},{4,2,1}};
+//		System.out.println(recurse(M,new int[M.length][M[0].length],0,0,M.length-1,M[0].length-1));
+		
+		int[] arr = new int[]{1,1,1,2};
+//		if (arr.length < 2)
+//			return arr.length;
+	 
+		int j = 0;
+		int i = 1;
+	 
+		while (i < arr.length) {
+			if (arr[i] == arr[j]) {
+				i++;
+			} else {
+				j++;
+				arr[j] = arr[i];
+				i++;
+			}
+		}
+	 
+		System.out.println(j+1);
 
 	}
 }

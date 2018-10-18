@@ -26,7 +26,7 @@ public class LargestNumber {
 				return (o2+o1).compareTo(o1+o2);
 			}
 		});
-		System.out.println(list);
+		System.out.println("List:"+list);
 		
 		for(String s:list){
 			sbr.append(s);

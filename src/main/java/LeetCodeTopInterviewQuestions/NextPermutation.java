@@ -49,7 +49,10 @@ public class NextPermutation {
 	}
 
 	public static void main(String[] args) {
-		int[] nums = new int[]{1,2};
-		nextPermutation(nums);
+		int[] nums = new int[]{1,4,8,5,3};
+		nums = nextPermutation(nums);
+		for(int i = 0; i < nums.length; i++){
+			System.out.print(nums[i]+" ");
+		}
 	}
 }

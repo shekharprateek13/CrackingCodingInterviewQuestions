@@ -36,7 +36,7 @@ public class Array4Sum {
 				if(map.containsKey(tempSum)){
 					list = map.get(tempSum);
 					list.add(new Position(i,j));
-				}else{
+				}else {
 					list = new ArrayList<Position>();
 					list.add(new Position(i,j));
 					map.put(tempSum,list);
