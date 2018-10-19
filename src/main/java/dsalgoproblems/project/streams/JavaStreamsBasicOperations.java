@@ -9,35 +9,8 @@ import java.util.stream.Stream;
 /**
  * @author akhauri shekhar
  */
-public class JavaStreamsPractice1 {
+public class JavaStreamsBasicOperations {
 
-	static class Employee{
-		private String name;
-		private int age;
-
-		Employee(){}
-		Employee(String name, int age){
-			this.name = name;
-			this.age = age;
-		}
-
-		public String getName() {
-			return this.name;
-		}
-
-		public int getAge() {
-			return this.age;
-		}
-
-		public void setName(String name) {
-			this.name = name;
-		}
-
-		public void setAge(int age) {
-			this.age = age;
-		}
-	}
-	
 	public static void main(String[] args) {
 		List<Employee> employeeList =  
 				Arrays.asList(
@@ -47,20 +20,20 @@ public class JavaStreamsPractice1 {
 						new Employee("Nancy Smith", 15),
 						new Employee("Deborah Sprightly", 29)
 						);
-	
+
 		//Prints out the Maximum length of Employee's Name
 		printLongestEmployeeNameLength(employeeList);	
-		
+
 		//Prints out the Minimum length of Employee's Name
 		printShortestEmployeeNameLength(employeeList);
 
 	}
-	
+
 	public static void printShortestEmployeeNameLength(List<Employee> employeeList) {
 		Supplier<Stream<String>> employeeListSupplier = ()  -> { 
 			return employeeList.stream().map(s -> String.valueOf(s.getName().length()));
 		};
-		
+
 		employeeListSupplier.get().mapToInt(Integer::parseInt).min().ifPresent(System.out::println);
 		employeeListSupplier.get().sorted(new Comparator<String>() {
 			@Override
@@ -69,8 +42,9 @@ public class JavaStreamsPractice1 {
 			}
 		}).findFirst().ifPresent(System.out::println);
 	}
-	
+
 	public static void printLongestEmployeeNameLength(List<Employee> employeeList) {
+		//Using Custom Comparator.....
 		employeeList.stream().map( s -> s.getName().length()).sorted(new Comparator<Integer>() {
 			@Override
 			public int compare(Integer o1, Integer o2) {
@@ -78,10 +52,11 @@ public class JavaStreamsPractice1 {
 			}
 		}).findFirst().ifPresent(System.out::println);
 
+		//Using Supplier.....
 		Supplier<Stream<String>> employeeListSupplier = ()  -> { 
 			return employeeList.stream().map(s -> String.valueOf(s.getName().length()));
 		};
-		
+
 		employeeListSupplier.get().mapToInt(Integer::parseInt).max().ifPresent(System.out::println);
 	}
 }
