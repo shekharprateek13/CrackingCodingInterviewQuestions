@@ -1,4 +1,4 @@
-package dsalgoproblems.programcreek.combinations.permutations;
+package dsalgoproblems.project.programcreek.combinations.permutations;
 
 import java.util.ArrayList;
 import java.util.List;
