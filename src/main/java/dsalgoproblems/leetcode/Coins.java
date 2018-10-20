@@ -4,7 +4,6 @@
 package dsalgoproblems.leetcode;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -38,7 +37,7 @@ public class Coins {
         }
 
         // Second base case; first row is always [1].
-        triangle.addAll((Collection<? extends List<Integer>>) new ArrayList<>());
+        triangle.addAll(new ArrayList<>());
         triangle.get(0).add(1);
 
         for (int rowNum = 1; rowNum < numRows; rowNum++) {
