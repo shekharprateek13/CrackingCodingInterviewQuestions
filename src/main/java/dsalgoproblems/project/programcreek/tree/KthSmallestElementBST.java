@@ -1,5 +1,7 @@
 package dsalgoproblems.project.programcreek.tree;
 
+import java.util.LinkedList;
+
 /**
  * @author shekh
  */
@@ -24,6 +26,28 @@ public class KthSmallestElementBST {
 		
 		getKthSmallestElement(root.rightChild, k);
 	}
+
+	public static void getKthSmallestElementIteratively(TreeNode root, int k) {
+		LinkedList<TreeNode> stack = new LinkedList<>();
+		TreeNode current = root;
+
+		int count = 0;
+		while (current != null || !stack.isEmpty()) {
+
+			while (current != null) {
+				stack.push(current);
+				current = current.leftChild;
+			}
+
+			current = stack.pop();
+			count = count + 1;
+			if(count == k){
+				System.out.print("Kth Smallest Element: " + current);
+			}
+
+			current = current.rightChild;
+		}
+	}
 	
 	public static void main(String[] args) {
 		TreeNode root = new TreeNode(27);
@@ -44,6 +68,6 @@ public class KthSmallestElementBST {
 		 *    10 19 31 42
 		 */
 		resetCurrentCount();
-		getKthSmallestElement(root,5);
+		getKthSmallestElementIteratively(root,6);
 	}
 }
