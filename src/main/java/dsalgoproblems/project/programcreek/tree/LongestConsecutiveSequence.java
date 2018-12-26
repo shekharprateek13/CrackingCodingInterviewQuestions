@@ -47,7 +47,7 @@ public class LongestConsecutiveSequence {
 		}
 		return max;
 	}
-
+	
 	public static void main(String[] args) {
 		TreeNode root = new TreeNode(1);
 		root.leftChild = new TreeNode(2);
@@ -57,12 +57,20 @@ public class LongestConsecutiveSequence {
 		root.rightChild.rightChild = new TreeNode(6);
 		root.rightChild.rightChild.leftChild = new TreeNode(7);
 		System.out.println(getLongestConsecutiveSequence(root));
-		/*
-		 *         
-		 *	     /   \
-		 *	    14   35
-		 *	   / \   / \
-		 *    10 19 31 42
-		 */
+		
+		System.out.println("Another Example..");
+		root = new TreeNode(50);
+		root.leftChild = new TreeNode(40);
+		root.leftChild.leftChild = new TreeNode(30);
+		root.leftChild.leftChild.leftChild = new TreeNode(20);
+		root.leftChild.rightChild = new TreeNode(45);
+		root.leftChild.rightChild.rightChild = new TreeNode(47);
+		root.leftChild.rightChild.rightChild.leftChild = new TreeNode(46);
+		root.leftChild.rightChild.rightChild.rightChild = new TreeNode(48);
+		root.leftChild.rightChild.rightChild.rightChild.rightChild = new TreeNode(49);
+		root.rightChild = new TreeNode(80);
+		root.rightChild.leftChild = new TreeNode(70);
+		root.rightChild.rightChild = new TreeNode(90);
+		System.out.println(getLongestConsecutiveSequence(root));
 	}
 }
