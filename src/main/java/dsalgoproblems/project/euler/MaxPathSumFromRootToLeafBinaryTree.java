@@ -10,7 +10,7 @@ public class MaxPathSumFromRootToLeafBinaryTree {
 	static int maximumSum = 0;
 	static TreeNode leafNodeWithMaxSum = null;
 	
-	static class TreeNode{
+	static class TreeNode {
 		int data;
 		TreeNode left;
 		TreeNode right;

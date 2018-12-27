@@ -3,7 +3,7 @@ package dsalgoproblems.project.programcreek.tree;
 /**
  * @author shekh
  */
-public class ConvertASortedArrayToBinaryTree {
+public class ConvertASortedArrayToBinarySearchTree {
 
 	public static TreeNode recurse(int[] inorder,int start, int end){
 		if(start > end)

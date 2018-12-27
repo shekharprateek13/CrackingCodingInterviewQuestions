@@ -28,7 +28,7 @@ public class BinaryTreeZigZagOrderTraversal{
 		TreeNode(int x) { val = x; }
 	}
 
-	public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+	public List<List<Integer>> zigzag(TreeNode root) {
 		List<List<Integer>> parentList = new LinkedList<List<Integer>>();
 		Stack<TreeNode> stack = new Stack<TreeNode>();
 		stack.push(root);

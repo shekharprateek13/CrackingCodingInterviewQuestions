@@ -56,10 +56,6 @@ public class SumRootToLeaf {
 		List<List<TreeNode>> completeList = new LinkedList<List<TreeNode>>();
 		sumRootToLeaf(root, list, completeList);
 		completeList.stream().forEach(System.out::println);
-		/*for(List<TreeNode> l:completeList){
-			System.out.println(l);
-		}
-		System.out.println(sumRootToLeaf(root,0,0));
-		*/
+
 	}
 }

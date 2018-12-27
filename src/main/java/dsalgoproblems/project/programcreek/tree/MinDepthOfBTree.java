@@ -61,5 +61,6 @@ public class MinDepthOfBTree {
 		root.rightChild = new TreeNode(3);
 		root.rightChild.leftChild = new TreeNode(6);
 		System.out.println(getMinDepthUsingLevelOrderTraversal(root));
+		System.out.println(getMinDepth(root));
 	}
 }
